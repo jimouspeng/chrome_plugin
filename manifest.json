@@ -1,0 +1,32 @@
+{
+    "name": "muyuan",
+    "description": "我的chrome插件",
+    "version": "0.0.1",
+    "manifest_version": 3,
+    "icons": {
+        "16": "/static/05.jpg",
+        "32": "/static/05.jpg",
+        "48": "/static/05.jpg",
+        "128": "/static/05.jpg"
+    },
+    "action": {
+        "default_popup": "/template/popup.html",
+        "default_icon": "/static/05.jpg",
+        "default_title": "❤"
+    },
+    "background": {
+        "service_worker": "/execute/background.js"
+    },
+    "content_scripts": [
+        {
+            "js": ["/execute/content.js"],
+            "matches": ["http://*/*", "https://*/*"],
+            "run_at": "document_end"
+        }
+    ],
+    "externally_connectable": {
+        "matches": ["http://*/*", "https://*/*"]
+    },
+    "permissions": ["tabs", "notifications", "storage"],
+    "host_permissions": ["http://*/*", "https://*/*"]
+}

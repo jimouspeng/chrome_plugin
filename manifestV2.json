@@ -1,0 +1,14 @@
+{
+    "name": "muyuan",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description": "第一个chrome插件",
+    "background": {
+        "scripts": ["/execute/background.js"]
+    },
+    "browser_action": {
+        "default_title": "❤",
+        "default_icon": "/static/05.jpg",
+        "default_popup": "/template/popup.html"
+    }
+}
